@@ -10,7 +10,7 @@ CREATE TABLE aluno (
     data_nascimento date
 ) engine=InnoDB;
 
-CREATE TABLE turma (
+CREATE TABLE curso (
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
 	codigo_turma VARCHAR(30),
     data_inicio date,
@@ -27,15 +27,15 @@ CREATE TABLE professor (
 ) engine=InnoDB;
 
 INSERT INTO aluno(nome, email, telefone, data_nascimento)
-	values('Marcio Leal', 'marcio@email.com', '(51) 99999-9999', '1984-04-26');
+	VALUES('Marcio Leal', 'marcio@email.com', '(51) 99999-9999', '1984-04-26');
 INSERT INTO aluno(nome, email, telefone, data_nascimento)
-	values('João Silva', 'joao@email.com', '(51) 99999-8888', '1990-10-10');
+	VALUES('João Silva', 'joao@email.com', '(51) 99999-8888', '1990-10-10');
 
-INSERT INTO turma(codigo_turma, data_inicio, data_fim, descricao)
-	values('A3.1', '2022-01-01', '2022-06-30', 'Turma inicial do 1º semetre');
+INSERT INTO curso(codigo_turma, data_inicio, data_fim, descricao)
+	VALUES('I31', '2022-01-01', '2022-06-30', 'Turma inicial (I) de Terça (3) do 1º semetre');
     
 INSERT INTO professor(nome, email, telefone, data_nascimento)
-	values('Maria Josefina', 'maria.josefina@email.com', '(51) 99999-7777', '1980-10-10');
+	VALUES('Maria Josefina', 'maria.josefina@email.com', '(51) 99999-7777', '1980-10-10');
     
 SELECT * FROM aluno;
 SELECT * FROM turma;
